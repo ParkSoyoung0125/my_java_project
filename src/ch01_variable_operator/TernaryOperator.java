@@ -51,6 +51,14 @@ public class TernaryOperator {
         message = score + "점이므로 " + msg + "입니다." ;
         System.out.println(message);
 
+        // 60점 이상이면 "합격", 60점 미만면 "불합격", 100점이면 "만점"
+        int scr = 60;
+        String msg2 = scr == 100 ? "만점" : "합격";
+        msg = scr >=60 ? msg2 : "불합격";
+        String comt = scr + "점이므로 " + msg + "입니다." ;
+        System.out.println(comt);
+
+
 
     }
 }
