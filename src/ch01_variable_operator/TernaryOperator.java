@@ -38,17 +38,18 @@ public class TernaryOperator {
         System.out.println("최소값 : " + min);
 
         // 숫자 7은(는) 홀수입니다.
-        int su = 9 ;
-        String str = su % 2 == 1 ? "숫자 " + su + "은(는) 홀수입니다."
-                                : "숫자 " + su + "은(는) 짝수입니다." ;
-        System.out.println(str);
+        int su = 8 ;
+        String message;
+        String msg = su % 2 == 1 ? "홀수" : "짝수" ;
+        message = "숫자 " + su + "은(는) " + msg +"입니다." ;
+        System.out.println(message);
 
         // 60점 이상이면 합격
         // 85점이므로 합격입니다. / 50점이므로 불합격입니다.
-        int score = 60 ;
-        String str2 = score >= 60 ? score + "점이므로 합격입니다."
-                                : score + "점이므로 불합격입니다." ;
-        System.out.println(str2);
+        int score = 45 ;
+        msg = score >= 60 ? "합격" : "불합격" ;
+        message = score + "점이므로 " + msg + "입니다." ;
+        System.out.println(message);
 
 
     }
