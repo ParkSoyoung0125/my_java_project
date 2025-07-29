@@ -24,7 +24,7 @@ public class WhileTest2 {
         } //while문 종료 후 아래 if문 수행.
 
         if (count > 0) {    // 시험 점수가 양수일 경우
-            double average = (double) total / count;
+            double average =  (double)total / count;
             System.out.println("총 시험 횟수 : " + count);
             System.out.println("총점 : " + total);
             System.out.println("평균 : " + average + "점");
