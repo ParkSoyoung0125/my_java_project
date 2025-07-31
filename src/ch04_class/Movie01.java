@@ -1,12 +1,54 @@
 package ch04_class;
 
 public class Movie01 {
-    String name;
-    String[] genre;// 장르
-    int runningTime;// 러닝타임(분단위)
-    String [] ott;// 지원하는 ott
-    double rating;// 영화평점
-    int ageMovie;// 영화 등급
+    private String name;
+    private String[] genre;// 장르
+    private int runningTime;// 러닝타임(분단위)
+    private String [] ott;// 지원하는 ott
+    private double rating;// 영화평점
+    private int ageMovie;// 영화 등급
+
+    public void setName(String name){   // name setter
+        this.name = name;
+    }
+    public String getName(){            // name getter
+        return name;
+    }
+
+    public void setGenre(String[] genre){   // genre setter
+        this.genre = genre;
+    }
+    public String[] genre(){                //genre getter
+        return genre;
+    }
+
+    public void setRunningTime(int runningTime){    // runningTime setter
+        this.runningTime = runningTime;
+    }
+    public int getRunningTime(){                    // runningTime getter
+        return runningTime;
+    }
+
+    public void setOtt(String[] ott) {          // ott setter
+        this.ott = ott;
+    }
+    public String[] getOtt() {                     // ott getter
+        return ott;
+    }
+
+    public void setRating(double rating) {         // rating setter
+        this.rating = rating;
+    }
+    public double getRating() {                     // rating getter
+        return rating;
+    }
+
+    public void setAgeMovie(int ageMovie){          // ageMovie setter
+        this.ageMovie = ageMovie;
+    }
+    public int getAgeMovie() {                      // ageMovie getter
+        return ageMovie;
+    }
 
     //suppotOTT(String ottN) ottN에 플랫폼 입력시 지원하면 "관람가능합니다."/
     //                          지원안하면 "해당 ott에서는 지원하지않습니다." 출력
@@ -35,9 +77,8 @@ public class Movie01 {
     String runningTime() {
         int runHours = runningTime / 60;
         int runminutes = runningTime % 60;
-        String runTimeMsg = name + "의 러닝타임은 " + runHours + "시간 " + runminutes + "분 입니다.";
+        String runTimeMsg = getName() + "의 러닝타임은 " + runHours + "시간 " + runminutes + "분 입니다.";
         return runTimeMsg;
     }
-
     //genreMovie(String str) 장르가 str인 영화 출력
 }
