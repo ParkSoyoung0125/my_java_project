@@ -6,6 +6,7 @@ public class HumanHealthMain {
         human.output1();
 
         Health health = new Health("박영희", "F", 162.3, 52.45);
-        health.calculate();
+        health.calculate();//비만률
+        health.output2();//결과값
     }
 }

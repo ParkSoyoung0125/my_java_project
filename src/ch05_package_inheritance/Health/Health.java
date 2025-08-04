@@ -26,25 +26,25 @@ public class Health extends Human {
 
 
 
-//    public String output2(){
-//        super.output1();
-//        if (fatrate <= 90) {
-//            result = "저체중";
-//        } else if(fatrate > 90 && fatrate < 111){
-//            result = "정상(표준체중)";
-//        } else if (fatrate > 110 && fatrate < 121) {
-//            result = "과체중";
-//        } else if (fatrate > 120 && fatrate < 131) {
-//            result = "경도비만";
-//        } else if(fatrate > 130 && fatrate < 151){
-//            result = "중도비만";
-//        } else if (fatrate > 150) {
-//            result = "고도비만";
-//        }
-//        System.out.println(fatrate);
-//        System.out.println(result);
-//        return result;
-//    }
+    public String output2(){
+        super.output1();
+        if (this.fatrate <= 90) {
+            result = "저체중";
+        } else if(this.fatrate > 90 && this.fatrate < 111){
+            result = "정상(표준체중)";
+        } else if (this.fatrate > 110 && this.fatrate < 121) {
+            result = "과체중";
+        } else if (this.fatrate > 120 && this.fatrate < 131) {
+            result = "경도비만";
+        } else if(this.fatrate > 130 && this.fatrate < 151){
+            result = "중도비만";
+        } else if (this.fatrate > 150) {
+            result = "고도비만";
+        }
+        System.out.println(this.fatrate);
+        System.out.println(result);
+        return result;
+    }
 
 
 
