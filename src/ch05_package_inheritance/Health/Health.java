@@ -7,27 +7,24 @@ public class Health extends Human {
 
     public Health(String name, String gender, double height, double weight){
         super(name, gender, height, weight);
-        this.s_weight = s_weight;
-        this.fatrate = fatrate;
-        this.result = result;
     }
 
     public void calculate(){
-        super.output1();
         if (super.getGender() == "남자") {
             this.s_weight = (getHeight()-100.0)*0.9;
         } else if(super.getGender() == "여자"){
             this.s_weight = (getHeight()-100.0)*0.85;
-        }
-        System.out.println(s_weight);
-        fatrate = (super.getWeight()/s_weight)*100;
-        System.out.println(fatrate);
+        } else {}
+//        System.out.println(this.s_weight);
+        this.fatrate = (super.getWeight()/this.s_weight)*100;
+//        System.out.println(this.fatrate);
     }
 
 
 
-    public String output2(){
+    public void output2(){
         super.output1();
+        calculate();
         if (this.fatrate <= 90) {
             result = "저체중";
         } else if(this.fatrate > 90 && this.fatrate < 111){
@@ -41,9 +38,11 @@ public class Health extends Human {
         } else if (this.fatrate > 150) {
             result = "고도비만";
         }
-        System.out.println(this.fatrate);
-        System.out.println(result);
-        return result;
+//        System.out.println(this.fatrate);
+//        System.out.println(result);
+        String fat = String.format("%.3f",(this.fatrate/100.0));
+        String message = super.getName() + "님은 비만도가 " + fat + "이고, " + result + "입니다.";
+        System.out.println(message);;
     }
 
 

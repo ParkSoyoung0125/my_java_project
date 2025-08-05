@@ -14,14 +14,12 @@ public class Human {
     }
 
     public void output1(){
-        if (gender == "M") {
+        if (this.gender == "M") {
             this.gender = "남자";
-        } else if (gender == "F") {
+        } else if (this.gender == "F") {
             this.gender = "여자";
-        }  else {
-            this.gender = "오류(존재하지 않는 정보)";
-        }
-        String msg = "이름 : " + name + ", 성별 : " + gender + ", 키 : " + height + ", 몸무게 : " + weight;
+        } else {}
+        String msg = "이름 : " + this.name + ", 성별 : " + this.gender + ", 키 : " + this.height + ", 몸무게 : " + this.weight;
         System.out.println(msg);
     }
 

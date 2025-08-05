@@ -16,4 +16,15 @@ public class Beverage04 {
         this.name = name;
         this.price = price;
     }
+
+    public String getName(){
+        this.name = name;
+        return name;
+    }
+
+    @Override
+    public String toString(){
+        String message = "품명 : " + this.name + ", 단가 : " + this.price;
+        return message;
+    }
 }
