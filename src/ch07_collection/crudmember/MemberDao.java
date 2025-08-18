@@ -24,7 +24,7 @@ public class MemberDao {
     public List<Member> selectall() {
         return this.memberList;          //memberlist 전체 출력.
     }
-
+    
     public Member getOne(String id) {
         Member finddata = null;
         for (Member member : memberList){
@@ -35,7 +35,6 @@ public class MemberDao {
         }
         return finddata;
     }
-
 
     public int deleteData(String findid) {
         int result = -1;
